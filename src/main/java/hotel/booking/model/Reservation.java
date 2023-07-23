@@ -1,30 +1,41 @@
 package hotel.booking.model;
 
+import hotel.booking.enums.ReservationStatus;
+
+import javax.persistence.Entity;
+import javax.persistence.Enumerated;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
 
+@Entity
 public class Reservation {
 
+    @NotNull
+    private Long reservationId;
 
-    private Long hotelId;
+    @NotNull
+    private LocalDate checkInDate;
 
-    private String name;
+    @NotNull
+    private LocalDate checkOutDate;
 
-    private String hotelEmail;
+    @NotNull
+    private Integer noOfPerson;
 
-    private String password;
+    @ManyToOne
+    private Room room;
 
-    private String hotelPhone;
+    @ManyToOne
+    private Customer customer;
 
-    private String hotelTelephone;
+    @ManyToOne
+    private Hotel hotel;
 
-    private Address address;
+    @Enumerated
+    private ReservationStatus reservationStatus;
 
-
-    private List<String> amenities;
-
-    private List<Room> rooms;
-
-    private List<Reservation> reservations;
 
 }

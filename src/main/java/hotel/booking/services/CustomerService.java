@@ -10,6 +10,8 @@ public interface CustomerService {
     public String updateMobile (UpdateRequest updateRequest);
     public String updateName (UpdateRequest updateRequest);
     public String updateAddress (UpdateRequest updateRequest);
+    public String deleteCustomer(UpdateRequest updateRequest);
+
 
     public List<CustomerResponse> getToBeDeletedCustomers();
     public CustomerResponse viewProfile();

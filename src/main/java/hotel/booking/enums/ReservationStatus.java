@@ -1,4 +1,5 @@
 package hotel.booking.enums;
 
-public class ReservationStatus {
+public enum ReservationStatus {
+    BOOKED, CLOSED;
 }

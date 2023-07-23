@@ -2,25 +2,34 @@ package hotel.booking.model;
 
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.validation.constraints.NotNull;
+import java.util.*;
 
 
 @Entity
 public class Room {
 
     @NotNull
-    private String RoomNumber;
+    private long room_id;
 
     @NotNull
-    private String RoomType;
+    private String roomType;
 
-    private Integer number_of_people;
+    @NotNull
+    private boolean isAvailable;
 
-    private long roomId;
+    @NotNull
+    private float pricing;
 
-    private boolean availability;
+    @NotNull
+    private String roomNumber;
 
-    private float price;
+    @ManyToOne
+    private Hotel hotel;
 
+    @OneToMany
+    private List <Reservation> reservations;
 
 }

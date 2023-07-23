@@ -13,7 +13,7 @@ public interface ReservationService {
 
     public ReservationResponse CreateReservation (Long RoomNo, ReservationRequest reservationRequest);
     public String cancelReservation(Long reservationId);
-    public List<Reservation> getReservationofHotel(Hotel hotelName);
-    public List<Reservation> getReservationofCustomer(Customer CustomerName);
+    public List<Reservation> getReservationofHotel();
+    public List<Reservation> getReservationofCustomer();
 
 }
