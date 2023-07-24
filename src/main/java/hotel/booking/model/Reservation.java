@@ -1,5 +1,6 @@
 package hotel.booking.model;
 
+import hotel.booking.dto.Payment;
 import hotel.booking.enums.ReservationStatus;
 
 import javax.persistence.Entity;
@@ -14,19 +15,15 @@ import java.time.*;
 public class Reservation {
 
     @NotNull
-    private Long reservationId;
+    private long reservationId;
 
-    @NotNull
     private LocalDate checkInDate;
 
-    @NotNull
     private LocalDate checkOutDate;
 
-    @NotNull
-    private Integer noOfPerson;
+    private Integer noOfPeople;
 
-    @ManyToOne
-    private Room room;
+    private Payment payment;
 
     @ManyToOne
     private Customer customer;
@@ -34,8 +31,9 @@ public class Reservation {
     @ManyToOne
     private Hotel hotel;
 
-    @Enumerated
-    private ReservationStatus reservationStatus;
+    @ManyToOne
+    private Room room;
+
 
 
 }

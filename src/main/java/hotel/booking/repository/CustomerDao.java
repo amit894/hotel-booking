@@ -7,14 +7,12 @@ import org.springframework.data.jpa.repository.Query;
 
 import java.util.*;
 
-public interface CustomerDao extends  JpaRepository<Customer, Long{
+public interface CustomerDao extends  JpaRepository<Customer, Long>{
 
     Optional<Customer> findByEmail(String email);
     List<Customer> findByToBeDeleted(Boolean toBeDeleted);
     Integer setCustomerEmail(Long customerId, String email);
     Integer setCustomerPhone(Long customerId, String phone);
-
-
 
 
 }

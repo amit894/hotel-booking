@@ -7,28 +7,26 @@ import java.util.*;
 
 public class Hotel {
 
-    @Id @GeneratedValue
-    private Long hotelId;
+   @Id @GeneratedValue
+   private long hotelId;
 
-    private String name;
+   private String address;
 
-    private String hotelEmail;
+   private String hotelEmail;
 
-    private String password;
+   private String hotelPhoneNumber;
 
-    private String hotelPhone;
+   private String hotelName;
 
-    private String hotelTelephone;
+   private List <String> amenities;
 
 
-    private Address address;
+   @OneToMany
+   private List <Room> room;
 
-    @OneToMany
-    private List<String> amenities;
 
-    @OneToMany
-    private List<Room> rooms;
+   @OneToMany
+   private List <Reservation> reservations;
 
-    @OneToMany
-    private List<Reservation> reservations;
+
 }

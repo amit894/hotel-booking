@@ -1,6 +1,8 @@
 package hotel.booking.dto.response;
 
 import hotel.booking.enums.ReservationStatus;
+
+import javax.persistence.Enumerated;
 import java.time.*;
 
 public class ReservationResponse {

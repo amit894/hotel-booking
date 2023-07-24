@@ -11,9 +11,12 @@ import java.util.*;
 
 public interface ReservationService {
 
-    public ReservationResponse CreateReservation (Long RoomNo, ReservationRequest reservationRequest);
-    public String cancelReservation(Long reservationId);
-    public List<Reservation> getReservationofHotel();
-    public List<Reservation> getReservationofCustomer();
+   public ReservationResponse createReservation (Long roomNo, ReservationRequest reservationRequest);
+   public String cancelReservation (Long reservationId);
+
+   public List<ReservationResponse> getReservationofHotel();
+   public List <ReservationResponse> getReservationofCustomer();
+   public ReservationResponse getReservationById(Long ReservationId);
+
 
 }
