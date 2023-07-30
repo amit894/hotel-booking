@@ -6,24 +6,25 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.NotNull;
 import java.util.*;
 import java.time.*;
 
 public class Customer {
 
-    @Id @GeneratedValue
-    private Long customerId;
+    @NotNull
+    private long customerId;
 
-    private String name;
+    @NotNull
+    private String customerEmail;
 
-    private String email;
-
-    private String password;
-
-    private String phone;
+    @NotNull
+    private String customerMobile;
 
     @Enumerated
     private Gender gender;
+
+    private String customerName;
 
     private Date dob;
 
@@ -35,4 +36,6 @@ public class Customer {
 
     @OneToMany
     private List<Reservation> reservations;
+
+
 }

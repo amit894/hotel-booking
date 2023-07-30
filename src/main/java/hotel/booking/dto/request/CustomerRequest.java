@@ -7,15 +7,11 @@ import java.time.*;
 
 public class CustomerRequest {
 
-    private String firstName;
-    private String lastName;
-    private Address address;
-    private String email;
-    private char [] password;
-    private LocalDate dob;
-
-    @Enumerated
-    private Gender gender;
+   private String name;
+   private String email;
+   private Address address;
+   private String mobile;
+   private Gender gender;
 
 
 }

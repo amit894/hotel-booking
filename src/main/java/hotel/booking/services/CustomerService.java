@@ -6,12 +6,12 @@ import java.util.*;
 
 
 public interface CustomerService {
-    public CustomerResponse registerCustomer (CustomerRequest registerCustomer);
-    public String updateEmail ( UpdateRequest updateRequest);
-    public String updatePhone ( UpdateRequest updateRequest);
+    public CustomerResponse registerCustomer (CustomerRequest customerRequest);
+    public String updateEmail (UpdateRequest updateRequest);
+    public String updatePhone (UpdateRequest updateRequest);
     public String updatePassword (UpdateRequest updateRequest);
-    public String deleteCustomer (UpdateRequest updateRequest);
 
-    public CustomerResponse getProfile (Long customerId);
+    public String deleteCustomer (UpdateRequest updateRequest);
+    public CustomerResponse getCustomerProfile (Long CustomerId);
 
 }

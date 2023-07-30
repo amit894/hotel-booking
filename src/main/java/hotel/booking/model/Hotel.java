@@ -3,30 +3,30 @@ package hotel.booking.model;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotNull;
 import java.util.*;
 
 public class Hotel {
 
-   @Id @GeneratedValue
+   @NotNull
    private long hotelId;
 
-   private String address;
+   @NotNull
+   private Address address;
 
-   private String hotelEmail;
+   @NotNull
+   private String mobileNumber;
 
-   private String hotelPhoneNumber;
-
-   private String hotelName;
-
-   private List <String> amenities;
-
+   @NotNull
+   private Email email;
 
    @OneToMany
-   private List <Room> room;
-
+   private List<Room> rooms;
 
    @OneToMany
-   private List <Reservation> reservations;
+   private List<Reservation> reservations;
+
 
 
 }

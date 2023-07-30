@@ -10,5 +10,6 @@ public class HotelRequest {
     private String hotelPhoneNumber;
     private String hotelName;
     private List<String> amenities;
+    private List<String> rooms;
 
 }

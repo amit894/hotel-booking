@@ -1,8 +1,10 @@
 package hotel.booking.services;
 
-import hotel.booking.model.Admin;
 import hotel.booking.exceptions.AdminException;
+import hotel.booking.dto.request.AdminRequest;
+import hotel.booking.dto.response.AdminResponse;
 
 public interface AdminService {
-    public Admin registerAdmin (Admin admin) throws AdminException ;
+    public AdminResponse registerAdmin(AdminRequest adminRequest) throws AdminException;
+
 }

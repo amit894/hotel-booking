@@ -15,14 +15,15 @@ import java.time.*;
 public class Reservation {
 
     @NotNull
-    private long reservationId;
+    private long reservation_id;
 
+    @NotNull
     private LocalDate checkInDate;
 
+    @NotNull
     private LocalDate checkOutDate;
 
-    private Integer noOfPeople;
-
+    @NotNull
     private Payment payment;
 
     @ManyToOne
@@ -31,9 +32,7 @@ public class Reservation {
     @ManyToOne
     private Hotel hotel;
 
-    @ManyToOne
-    private Room room;
-
-
+    @OneToMany
+    private List <Room> rooms;
 
 }

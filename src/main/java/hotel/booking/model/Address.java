@@ -19,4 +19,6 @@ public class Address {
     private String postalCode;
     @NotNull @NotEmpty @NotBlank
     private String country;
+
+
 }

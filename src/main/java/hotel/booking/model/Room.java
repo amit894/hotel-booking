@@ -17,18 +17,24 @@ public class Room {
     @NotNull
     private long roomId;
 
+    @NotNull
+    private int roomNumber;
+
     @Enumerated
     private RoomType roomType;
 
-    private Integer noOfPeople;
+    @NotNull
+    private float costOfRoom;
 
-    private float cost;
+    @NotNull
+    private int numberOfPeople;
+
+    @OneToMany
+    private List<Reservation> reservations;
 
     @ManyToOne
     private Hotel hotel;
 
-    @OneToMany
-    private List<Reservation> reservations;
 
 
 }
